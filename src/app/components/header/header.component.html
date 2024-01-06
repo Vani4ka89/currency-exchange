@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngFor="let currency of currencyList">
+    <div>{{ currency.ccy }}</div>
+    <div>{{ currency.sale }}</div>
+  </div>
+</div>
+
+
+<!--<div class="container">-->
+<!--  <div class="selection-content">-->
+<!--    <input type="number" placeholder="0" (change)="currencyChange($event)">-->
+<!--    <select name="currency">-->
+<!--      <option>&#45;&#45;Select&#45;&#45;</option>-->
+<!--      <option (change)="changeRate(currency)">{{currency.cc}}</option>-->
+<!--    </select>-->
+
+<!--    <p>to</p>-->
+
+<!--    <input type="number" placeholder="0" [value]="convert()">-->
+<!--    <select name="" id="">-->
+<!--      <option>&#45;&#45;Select&#45;&#45;</option>-->
+<!--      <option>-->
+
+<!--      </option>-->
+<!--    </select>-->
+<!--  </div>-->
+<!--  <button (click)="convert()">Submit</button>-->
+<!--</div>-->

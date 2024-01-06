@@ -1,0 +1,50 @@
+.container {
+  /*width: 700px;*/
+  background-color: #09455b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.selection-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.selection-content p {
+  font-family: "Roboto Light";
+  font-size: 20px;
+  font-weight: bold;
+  color: snow;
+}
+
+select {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  font-weight: bold;
+}
+
+select:focus {
+  outline: none;
+}
+
+.result {
+  color: yellow;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 10px;
+  width: 25%;
+}
