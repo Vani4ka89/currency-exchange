@@ -3,45 +3,13 @@
   justify-content: space-around;
   align-items: center;
   height: 50px;
-  background-color: darkblue;
+  width: 100vw;
+  background-color: #09455b;
   color: snow;
 }
 
-
-
-/*.container {*/
-/*  width: 550px;*/
-/*  background-color: #09455b;*/
-/*  border-radius: 10px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: space-evenly;*/
-/*  align-items: center;*/
-/*}*/
-
-/*.selection-content {*/
-/*  display: flex;*/
-/*  justify-content: space-evenly;*/
-/*  align-items: center;*/
-/*  width: 100%;*/
-/*}*/
-
-/*.selection-content p {*/
-/*  font-family: "Roboto Light";*/
-/*  font-size: 20px;*/
-/*  font-weight: bold;*/
-/*  color: snow;*/
-/*}*/
-
-/*select {*/
-/*  font-size: 20px;*/
-/*  padding: 5px;*/
-/*  border-radius: 10px;*/
-/*  border: none;*/
-/*  height: 30px;*/
-/*  font-weight: bold;*/
-/*}*/
-
-/*select:focus {*/
-/*  outline: none;*/
-/*}*/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

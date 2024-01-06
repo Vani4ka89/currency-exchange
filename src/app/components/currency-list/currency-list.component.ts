@@ -20,7 +20,7 @@ export class CurrencyListComponent implements OnInit {
 
   amount: number
   result: number
-  fromCurrency: string = 'PLZ'
+  fromCurrency: string = 'EUR'
   toCurrency: string = 'UAH'
 
   constructor(private exchangeCurrencyService: ExchangeCurrencyService) {
@@ -28,7 +28,7 @@ export class CurrencyListComponent implements OnInit {
 
   ngOnInit(): void {
     this.exchangeCurrencyService.getCurrencyList().subscribe(value => {
-      this.currencyList = value.sort((a, b) => a.sale - b.sale).slice(4)
+      this.currencyList = value.sort((a, b) => a.sale - b.sale).slice(4).reverse().slice(1)
     })
   }
 

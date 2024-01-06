@@ -1,17 +1,20 @@
 .container {
-  /*width: 700px;*/
+  height: 200px;
+  width: 700px;
   background-color: #09455b;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 .selection-content {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
