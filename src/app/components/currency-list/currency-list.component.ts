@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
 import {ExchangeCurrencyService} from "../../services";
@@ -11,6 +11,7 @@ import {IPrivatCurrency} from "../../interfaces";
   imports: [
     NgForOf,
     FormsModule,
+    NgIf,
   ],
   templateUrl: './currency-list.component.html',
   styleUrl: './currency-list.component.css'
