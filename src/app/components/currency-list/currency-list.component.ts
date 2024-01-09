@@ -21,7 +21,7 @@ export class CurrencyListComponent implements OnInit {
 
   amount: number
   result: number
-  fromCurrency: string = 'EUR'
+  fromCurrency: string = 'USD'
   toCurrency: string = 'UAH'
 
   constructor(private exchangeCurrencyService: ExchangeCurrencyService) {
