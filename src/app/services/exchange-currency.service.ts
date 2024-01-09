@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, Observable} from "rxjs";
+import {Observable} from "rxjs";
 
 import {urls} from "../constants";
 import {IPrivatCurrency} from "../interfaces";
@@ -9,7 +9,6 @@ import {IPrivatCurrency} from "../interfaces";
   providedIn: 'root'
 })
 export class ExchangeCurrencyService {
-  private currencyValuesSubject = new BehaviorSubject<IPrivatCurrency>(null);
 
   constructor(private readonly httpClient: HttpClient) {
   }
@@ -18,11 +17,4 @@ export class ExchangeCurrencyService {
     return this.httpClient.get<IPrivatCurrency[]>(`https://api.allorigins.win/raw?url=${encodeURIComponent(urls.exchange.currencyList)}`)
   }
 
-  getCurrencyForUse(): Observable<IPrivatCurrency> {
-    return this.currencyValuesSubject.asObservable()
-  }
-
-  setCurrencyForUse(currency: IPrivatCurrency): void {
-    this.currencyValuesSubject.next(currency)
-  }
 }

@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.exchangeCurrencyService.getCurrencyList().subscribe(value => {
-        this.currencyList = value.sort((a, b) => a.sale - b.sale).slice(4).reverse().slice(1)
+        this.currencyList = value.sort((a, b) => a.sale - b.sale).slice(4).reverse()
       }
     )
   }

@@ -1,10 +1,6 @@
 <div class="container">
 
-  <!--  <div>Sale</div>-->
-
-  <!--  <div class="selection-content">-->
-
-  <div>
+  <div class="selection-block">
     <input type="number" placeholder="0" [(ngModel)]="amount" id="amountSale">
 
     <label for="fromCurrencySale">From Currency:</label>
@@ -14,9 +10,7 @@
     </select>
   </div>
 
-  <!--    <p>to</p>-->
-
-  <div>
+  <div class="selection-block">
     <input type="number" placeholder="0" [value]="convert()">
 
     <label for="toCurrencySale">To Currency:</label>
@@ -26,8 +20,8 @@
     </select>
   </div>
 
-  <!--  </div>-->
-
-  <div class="result">{{ result || 0 }}</div>
+  <div class="result">
+    <p>{{ result || 0 }}</p>
+  </div>
 
 </div>
