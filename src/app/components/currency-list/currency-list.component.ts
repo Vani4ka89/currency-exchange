@@ -20,7 +20,7 @@ export class CurrencyListComponent implements OnInit {
   currencyList: IPrivatCurrency[];
 
   amount: number
-  result: number
+  result: number = null
   toggle: boolean = null
   fromCurrency: string = 'USD'
   toCurrency: string = 'UAH'
@@ -50,8 +50,6 @@ export class CurrencyListComponent implements OnInit {
   turnMode() {
     this.toggle = !this.toggle;
   }
-
-  protected readonly Math = Math;
 
   reset() {
     this.amount = null;

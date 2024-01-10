@@ -8,6 +8,7 @@
   align-items: flex-start;
   margin-top: 10px;
   padding: 20px;
+  box-shadow: 2px 2px yellow;
 }
 
 .selection-block {
@@ -15,6 +16,7 @@
   justify-content: space-between;
   align-self: stretch;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 select {
@@ -47,8 +49,23 @@ button {
 .result {
   color: yellow;
   align-self: center;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 25px;
+}
+
+p {
+  padding: 5px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.no-result {
+  visibility: hidden;
+}
+
+.is-result {
+  display: block;
+  background-color: #413f3f;
 }
 
 input {

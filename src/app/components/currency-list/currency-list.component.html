@@ -14,7 +14,7 @@
 
 
   <div class="selection-block">
-    <input type="number" placeholder="0" [value]="convert() ? convert() : reset()">
+    <input type="number" placeholder="0" [value]="convert() || null">
 
     <label for="toCurrencySale">To Currency:</label>
     <select [(ngModel)]="toCurrency" id="toCurrencySale">
@@ -24,7 +24,7 @@
   </div>
 
   <div class="result">
-    <p>{{ result }}</p>
+    <p [className]="result ? 'is-result' : 'no-result' ">{{ result }}</p>
   </div>
 
   <button (click)="reset()">RESET</button>
