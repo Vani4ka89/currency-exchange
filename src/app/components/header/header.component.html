@@ -1,6 +1,6 @@
 <div class="container">
   <div *ngFor="let currency of currencyList" class="content">
     <div>{{ currency.ccy }}</div>
-    <div>{{ currency.sale }}</div>
+    <div>{{ currency.buy.toString().substring(0,5) }} / {{currency.sale.toString().substring(0,5)}}</div>
   </div>
 </div>

@@ -21,6 +21,7 @@ export class CurrencyListComponent implements OnInit {
 
   amount: number
   result: number
+  toggle: boolean = null
   fromCurrency: string = 'USD'
   toCurrency: string = 'UAH'
 
@@ -41,9 +42,18 @@ export class CurrencyListComponent implements OnInit {
     return this.result = (this.amount / toRate) * fromRate;
   }
 
-  private getRate(currency: string): number {
+  getRate(currency: string): number {
     const selectedCurrency = this.currencyList.find(c => c.ccy === currency);
-    return selectedCurrency ? selectedCurrency.sale : 1.0;
+    return this.toggle ? (selectedCurrency ? selectedCurrency.buy : 1.0) : (selectedCurrency ? selectedCurrency.sale : 1.0);
   }
 
+  turnMode() {
+    this.toggle = !this.toggle;
+  }
+
+  protected readonly Math = Math;
+
+  reset() {
+    this.amount = null;
+  }
 }

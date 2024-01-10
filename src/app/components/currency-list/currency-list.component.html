@@ -1,27 +1,32 @@
 <div class="container" *ngIf="currencyList">
 
+  <button (click)="turnMode()">{{ toggle ? 'BUY' : 'SALE' }}</button>
+
   <div class="selection-block">
     <input type="number" placeholder="0" [(ngModel)]="amount" id="amountSale">
 
     <label for="fromCurrencySale">From Currency:</label>
-    <select [(ngModel)]="fromCurrency" id="fromCurrencySale">
-      <option *ngFor="let currency of currencyList">{{ currency.ccy }}</option>
-      <option>UAH</option>
+    <select class="select" [(ngModel)]="fromCurrency" id="fromCurrencySale">
+      <option class="option" *ngFor="let currency of currencyList">{{ currency.ccy }}</option>
+      <option class="option">UAH</option>
     </select>
   </div>
 
+
   <div class="selection-block">
-    <input type="number" placeholder="0" [value]="convert()">
+    <input type="number" placeholder="0" [value]="convert() ? convert() : reset()">
 
     <label for="toCurrencySale">To Currency:</label>
     <select [(ngModel)]="toCurrency" id="toCurrencySale">
-      <option>UAH</option>
-      <option *ngFor="let currency of currencyList">{{ currency.ccy }}</option>
+      <option class="option">UAH</option>
+      <option class="option" *ngFor="let currency of currencyList">{{ currency.ccy }}</option>
     </select>
   </div>
 
   <div class="result">
-    <p>{{ result || 0 }}</p>
+    <p>{{ result }}</p>
   </div>
+
+  <button (click)="reset()">RESET</button>
 
 </div>

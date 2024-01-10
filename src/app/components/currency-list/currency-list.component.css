@@ -1,5 +1,5 @@
 .container {
-  height: 200px;
+  height: 250px;
   background-color: #09455b;
   border-radius: 10px;
   display: flex;
@@ -19,15 +19,29 @@
 
 select {
   font-size: 20px;
-  padding: 5px;
+  padding: 0 5px;
   border-radius: 10px;
-  border: none;
   height: 30px;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  background-color: #413f3f;
+  color: yellow;
+  border-bottom-color: yellow;
 }
 
 select:focus {
   outline: none;
+}
+
+button {
+  align-self: center;
+  border-radius: 5px;
+  background-color: #413f3f;
+  color: yellow;
+  border-bottom-color: yellow;
+}
+
+.option {
+  background-color: #413f3f;
 }
 
 .result {
@@ -41,6 +55,8 @@ input {
   font-size: 20px;
   border-radius: 10px;
   width: 100px;
+  outline: ridge;
+  background-color: #c9c6c6;
 }
 
 label {
